@@ -1,4 +1,4 @@
-# Polaris-PySDK — specs Remote: `git@github.com:SiliconCentric/Polaris-PySDK.git`
+# Polaris-PySDK — specs Remote: `git@github.com:soccentric-polaris/Polaris-PySDK.git`
 Stack: Python, uv-managed, src layout. Consumes the `HalService` gRPC endpoint exposed by Polaris-Client — the same wire contract
 Polaris-Server speaks. ## Layout * `polaris-sdk/` — everything: source, tooling, docs, examples, the make workflow (setup/ gen/ check/ build).
 * `polaris-sdk/src/polaris_sdk/` — the package. Import name `polaris_sdk`, distribution name `polaris-sdk`.
