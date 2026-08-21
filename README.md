@@ -2,11 +2,32 @@
 
 ## Project Summary
 
-Polaris-PySDK packages the Python client used to call the HalService exposed by Polaris-Client. The distributable project is `polaris-sdk/`; its package name is `polaris-sdk` and its import namespace is `polaris_sdk`. The SDK combines a typed public API with generated protobuf and gRPC bindings under `src/polaris_sdk/_proto`, domain dataclasses and enums under `src/polaris_sdk/types`, and runtime helpers for connection, discovery, one-shot calls, monitoring, events, and long-running tests. `py.typed` marks the package for type-aware consumers.
+- Polaris-PySDK packages the Python client used to call the HalService
+  exposed by Polaris-Client. The distributable project is `polaris-sdk/`;
+  its package name is `polaris-sdk` and its import namespace is
+  `polaris_sdk`. The SDK combines a typed public API with generated
+  protobuf and gRPC bindings under `src/polaris_sdk/_proto`, domain
+  dataclasses and enums under `src/polaris_sdk/types`, and runtime helpers
+  for connection, discovery, one-shot calls, monitoring, events, and
+  long-running tests. `py.typed` marks the package for type-aware
+  consumers.
 
-The repository also contains generators in `polaris-sdk/tools`, examples for common and long-running operations, documentation, and a compatibility/deprecation shim for the former package name. The generated bindings cover the same broad module vocabulary as Polaris-HAL, so the SDK is a client contract rather than a local hardware implementation. It depends on a reachable HalService and therefore cannot prove physical peripheral support by itself.
+- The repository also contains generators in `polaris-sdk/tools`, examples
+  for common and long-running operations, documentation, and a
+  compatibility/deprecation shim for the former package name. The generated
+  bindings cover the same broad module vocabulary as Polaris-HAL, so the
+  SDK is a client contract rather than a local hardware implementation. It
+  depends on a reachable HalService and therefore cannot prove physical
+  peripheral support by itself.
 
-The root Makefile declares setup, virtual-environment, generation, stale-generated-file checks, pytest, Ruff, strict mypy, build, and cleanup workflows. The test suite includes connection, discovery, one-shot, event, monitor, long-running, type round-trip, deprecation, and fake-server fixtures. That is meaningful protocol/client coverage, though server interoperability, generated-code freshness in every environment, and real board behavior still need manual confirmation. The inventory below separates API functionality from deployment assumptions.
+- The root Makefile declares setup, virtual-environment, generation,
+  stale-generated-file checks, pytest, Ruff, strict mypy, build, and
+  cleanup workflows. The test suite includes connection, discovery,
+  one-shot, event, monitor, long-running, type round-trip, deprecation, and
+  fake-server fixtures. That is meaningful protocol/client coverage, though
+  server interoperability, generated-code freshness in every environment,
+  and real board behavior still need manual confirmation. The inventory
+  below separates API functionality from deployment assumptions.
 
 ## Feature Inventory
 
